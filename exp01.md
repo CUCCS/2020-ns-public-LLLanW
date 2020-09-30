@@ -39,7 +39,7 @@
 
 ###### 修改网络配置文件
 
-`vi /etc/network/interfaces`，将该链接中*etc-network-interfaces*部分粘贴到文件中：https://gist.github.com/c4pr1c3/8d1a4550aa550fabcbfb33fad9718db1
+`vi /etc/network/interfaces`，将该链接中*etc-network-interfaces*部分粘贴到文件中：https://gist.github.com/c4pr1c3/8d1a4550aa550fabcbfb33fad9718db1。  
 修改完成，执行`systemctl restart networking`,重启网络服务
 
 ###### 配置两块内部网卡ip地址
@@ -48,8 +48,8 @@
 执行`/sbin/ifup enp0s9`,`/sbin/ifup enp0s10`即可完成
 
 ###### 安装并配置dnsmasq
-`apt update && apt install dnsmasq`
-修改配置文件 `vi /etc/dnsmasq.conf`,将该链接中*diff dnsmasq.conf dnsmasq.conf.bak*部分中内容，对应文件中指定内容进行修改：https://gist.github.com/c4pr1c3/8d1a4550aa550fabcbfb33fad9718db1
+`apt update && apt install dnsmasq`  
+修改配置文件 `vi /etc/dnsmasq.conf`,将该链接中*diff dnsmasq.conf dnsmasq.conf.bak*部分中内容，对应文件中指定内容进行修改：https://gist.github.com/c4pr1c3/8d1a4550aa550fabcbfb33fad9718db1  
 新建两个文件：`vi /etc/dnsmasq.d/gw-enp010.conf`,`vi /etc/dnsmasq.d/gw-enp09.conf`并将该链接中余下两个部分分别写入：https://gist.github.com/c4pr1c3/8d1a4550aa550fabcbfb33fad9718db1
 
 ##### Kali-attacker
@@ -61,9 +61,9 @@
 ![XP1](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/XP1net.png)
 
 * 配置XP系统网络
-**在虚拟机外部选择网卡时，注意在设置->网络->网卡1->高级->控制芯片中选择“PCnet-FAST III”网络，否则无法正常建立连接**
-在“开始->控制面板->网络和Internet连接->网络连接->(右键本地连接)属性->(双击)Internet”协议中，手动修改ip地址、掩码及网关
-**注意，在配置完成后关闭网络防火墙，否则无法ping通**
+**在虚拟机外部选择网卡时，注意在设置->网络->网卡1->高级->控制芯片中选择“PCnet-FAST III”网络，否则无法正常建立连接**  
+在“开始->控制面板->网络和Internet连接->网络连接->(右键本地连接)属性->(双击)Internet”协议中，手动修改ip地址、掩码及网关  
+**注意，在配置完成后关闭网络防火墙，否则无法ping通**  
 
 ##### Victim-Kali-1
 
@@ -90,28 +90,28 @@
 ### 完成以下网络连通性测试
 
 * 靶机可以直接访问攻击者主机[√]
-![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping1.png)
-![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping2.png)
-![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping3.png)
-![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping4.png)
+![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping1.png)  
+![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping2.png)  
+![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping3.png)  
+![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping4.png)  
 
 * 攻击者主机无法直接访问靶机[√]
-![Aping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/attackerCantping.jpg)
+![Aping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/attackerCantping.jpg)  
 
 * 网关可以直接访问攻击者主机和靶机[√]
-![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping1.png)
-![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping2.png)
-![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping3.png)
-![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping4.png)
-![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping5.png)
+![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping1.png)  
+![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping2.png)  
+![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping3.png)  
+![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping4.png)  
+![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping5.png)  
 
 * 靶机的所有对外上下行流量必须经过网关[√]
 ![log](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/log.png)
 
 * 所有节点均可以访问互联网[√]
-![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf1.png)
-![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf2.png)
-![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf3.png)
-![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf4.png)
-![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf5.png)
-![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf6.png)
+![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf1.png)  
+![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf2.png)  
+![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf3.png)  
+![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf4.png)  
+![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf5.png)  
+![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf6.png)  
