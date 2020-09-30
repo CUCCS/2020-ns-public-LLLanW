@@ -71,7 +71,8 @@
 
 ##### Victim-XP-2
 
-![XP2](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/XP2net.png)
+![XP2](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/XP2net.png)  
+
 操作同Victim-XP-1
 
 ##### Victim-Debian-2
