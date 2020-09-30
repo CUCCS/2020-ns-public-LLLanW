@@ -89,26 +89,31 @@
 
 ### 完成以下网络连通性测试
 
-* 靶机可以直接访问攻击者主机[√]
+* 靶机可以直接访问攻击者主机[√]  
+
 ![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping1.png)  
 ![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping2.png)  
 ![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping3.png)  
 ![Vping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Vping4.png)  
 
-* 攻击者主机无法直接访问靶机[√]
+* 攻击者主机无法直接访问靶机[√]  
+
 ![Aping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/attackerCantping.jpg)  
 
-* 网关可以直接访问攻击者主机和靶机[√]
+* 网关可以直接访问攻击者主机和靶机[√]  
+
 ![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping1.png)  
 ![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping2.png)  
 ![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping3.png)  
 ![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping4.png)  
 ![Gping](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/Gping5.png)  
 
-* 靶机的所有对外上下行流量必须经过网关[√]
+* 靶机的所有对外上下行流量必须经过网关[√]  
+
 ![log](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/log.png)
 
-* 所有节点均可以访问互联网[√]
+* 所有节点均可以访问互联网[√]  
+
 ![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf1.png)  
 ![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf2.png)  
 ![surf](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp01/img/surf3.png)  
