@@ -101,8 +101,6 @@ EOF
 include $RULE_PATH/cnss.rules
 ```
 
-![rulesadd](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp09/img/snortaddconfig.png)  
-
 #### 启动
 
 `snort -q -A console -b -i enp0s3 -c /etc/snort/snort.conf -l /var/log/snort/`
