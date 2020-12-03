@@ -205,7 +205,7 @@ nmap -sX -P 2234 -n -vv 10.0.2.15
 
 ![nmapcowrie](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp11/img/nmapfcowrie.png)  
 
-![nmapcowrie](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp11/img/nmapcowries.png)  
+![nmapcowrie](https://github.com/CUCCS/2020-ns-public-LLLanW/blob/exp11/img/nmapcowrie.png)  
 
 ## 参考资料
 
